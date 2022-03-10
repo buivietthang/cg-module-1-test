@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findIndex(number1, array) {
+        for (let i = 0; i < array.length; i++) {
+            if (number1 === array[i]) {
+                alert("Phần tử cần tìm nằm trong mảng ở vị trí là " + i);
+                return i;
+            }
+        }
+    }
+
+    let num1 = +prompt("Nhập phần tử");
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+    findIndex(num1, arr);
+
+    function checkNumber(number2, array) {
+        let check = false;
+        for (let i = 0; i < array.length; i++) {
+            if (number2 === array[i]) {
+                check = true;
+                return document.write("Phần tử " + number2 + " thuộc mảng ");
+            }
+        }
+        if (!check) {
+            document.write("Phần tử " + number2 + " không thuộc mảng");
+        }
+    }
+
+    let num2 = +prompt("Nhập phần tử");
+    checkNumber(num2, arr);
+</script>
+</body>
+</html>

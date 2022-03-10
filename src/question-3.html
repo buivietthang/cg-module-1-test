@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function countVowel(string) {
+        let vowel = ["a", "o", "e", "u", "i"];
+        let count = 0;
+        for (let i = 0; i < string.length; i++) {
+            if (vowel.indexOf(string[i]) !== -1) {
+                count++;
+            }
+        }
+        if (count > 0) {
+            return count;
+        } else {
+            return false;
+        }
+    }
+
+    let string = prompt("Nhập 1 chuỗi");
+    alert("Số kí tự nguyên âm là: " + countVowel(string));
+</script>
+</body>
+</html>
